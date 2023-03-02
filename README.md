@@ -34,3 +34,14 @@ I then used AGC to compress the same dataset, also using GNU `time` to measure r
 ```bash
 /usr/bin/time -v agc create -t 4 -s 10000 -o data/sars-cov-2/sars-cov-2_ncbi-620k.agc data/sars-cov-2/reference.fas data/sars-cov-2/sars-cov-2_ncbi-620k.fa.gz 2> data/sars-cov-2/sars-cov-2_ncbi-620k.agc.log
 ```
+
+## Results
+I ran everything using 4 threads. Note that the CRAM runtime and peak memory include the Minimap2 step.
+
+| Compression/Tool | Size (bytes) | Time (seconds) | Peak Memory (KB) |
+| :--------------- | -----------: | -------------: | ---------------: |
+| Uncompressed     |   1652191680 |            N/A |              N/A |
+| GZ (`pigz -9`)   |          ??? |            ??? |              ??? |
+| XZ               |     56312672 |            ??? |              ??? |
+| CRAM 3.1         |     26190734 |            ??? |              ??? |
+| AGC 3.0          |          ??? |            ??? |              ??? |
