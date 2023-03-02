@@ -21,3 +21,9 @@ I want to be able to benchmark against reference-compressed CRAM, so I want to b
 wget -qO- "https://zenodo.org/record/5826274/files/sars-cov-2_ncbi-620k.fa.xz?download=1" | xz --decompress | pigz -9 -p 6 > data/sars-cov-2/sars-cov-2_ncbi-620k.fa.gz
 ```
 
+## Minimap2 to Samtools to Reference-Compressed CRAM
+I then mapped the `gzip`-compressed SARS-CoV-2 multi-genome FASTA to the [NC_045512.2 reference genome](https://www.ncbi.nlm.nih.gov/nuccore/1798174254) using [Minimap2 v2.24-r1122](https://github.com/lh3/minimap2/releases/tag/v2.24), and then piped to [Samtools v1.17](https://github.com/samtools/samtools/releases/tag/1.17) to convert Minimap2's SAM output to reference-compressed CRAM. I also wanted to use GNU `time` to measure runtime and peak memory usage.
+
+```bash
+/usr/bin/time -v bash -c "minimap2 -t 4 -a --score-N=0 --secondary=no data/sars-cov-2/reference.fas data/sars-cov-2/sars-cov-2_ncbi-620k.fa.gz | samtools view -@ 4 -C -T data/sars-cov-2/reference.fas --output-fmt-option version=3.1 --output-fmt-option use_lzma=1 --output-fmt-option archive=1 --output-fmt-option level=9 > data/sars-cov-2/sars-cov-2_ncbi-620k.cram" 2> data/sars-cov-2/sars-cov-2_ncbi-620k.cram.log
+```
