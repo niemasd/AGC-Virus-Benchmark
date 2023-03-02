@@ -36,12 +36,18 @@ I then used AGC to compress the same dataset, also using GNU `time` to measure r
 ```
 
 ## Results
-I ran everything using 4 threads. Note that the CRAM runtime and peak memory include the Minimap2 step.
+Note the following:
 
-| Compression/Tool | Size (bytes) | Time (seconds) | Peak Memory (KB) |
-| :--------------- | -----------: | -------------: | ---------------: |
-| Uncompressed     |   1652191680 |            N/A |              N/A |
-| GZ (`pigz -9`)   |          ??? |            ??? |              ??? |
-| XZ               |     56312672 |            ??? |              ??? |
-| CRAM 3.1         |     26190734 |            ??? |              ??? |
-| AGC 3.0          |          ??? |            ??? |              ??? |
+* Everything was run using 4 threads
+* GZ compression used `pigz` with `-9` compression level
+* CRAM runtime and peak memory include the Minimap2 step (see above)
+* CRAM compression used CRAM 3.1, LZMA, archive mode, and compression level 9 (see above)
+* AGC compression used segment size 10,000
+
+| Compression/Tool |   Size (bytes) | Time (seconds) | Peak Memory (KB) |
+| :--------------- | ---=---------: | -------------: | ---------------: |
+| Uncompressed     | 18,832,060,864 |            N/A |              N/A |
+| GZ               |            ??? |            ??? |              ??? |
+| XZ               |     56,312,672 |            ??? |              ??? |
+| CRAM 3.1         |     26,190,734 |            ??? |              ??? |
+| AGC 3.0          |            ??? |            ??? |              ??? |
