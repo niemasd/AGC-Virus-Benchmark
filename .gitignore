@@ -1,3 +1,6 @@
+# Niema's ignore
+data/sars-cov-2/sars-cov-2_ncbi-620k.fa.gz
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

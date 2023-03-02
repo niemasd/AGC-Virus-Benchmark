@@ -1,0 +1,71 @@
+[M::mm_idx_gen::0.002*1.01] collected minimizers
+[M::mm_idx_gen::0.003*1.64] sorted minimizers
+[M::main::0.003*1.64] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::0.003*1.59] mid_occ = 10
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::0.003*1.55] distinct minimizers: 5587 (99.93% are singletons); average occurrences: 1.004; average spacing: 5.332; total length: 29903
+[W::cram_set_voption] CRAM version 3.1 is still a draft and subject to change.
+This is a technology demonstration that should not be used for archival data.
+[M::worker_pipeline::66.237*3.94] mapped 16769 sequences
+[M::worker_pipeline::100.405*4.00] mapped 16778 sequences
+[M::worker_pipeline::143.576*4.01] mapped 16765 sequences
+[M::worker_pipeline::196.298*4.03] mapped 16776 sequences
+[M::worker_pipeline::258.555*4.03] mapped 16765 sequences
+[M::worker_pipeline::304.616*4.04] mapped 16775 sequences
+[M::worker_pipeline::359.979*4.04] mapped 16769 sequences
+[M::worker_pipeline::413.062*4.05] mapped 16767 sequences
+[M::worker_pipeline::468.519*4.05] mapped 16772 sequences
+[M::worker_pipeline::519.489*4.05] mapped 16756 sequences
+[M::worker_pipeline::567.717*4.05] mapped 16760 sequences
+[M::worker_pipeline::627.886*4.05] mapped 16782 sequences
+[M::worker_pipeline::667.685*4.05] mapped 16781 sequences
+[M::worker_pipeline::723.676*4.06] mapped 16777 sequences
+[M::worker_pipeline::775.565*4.06] mapped 16774 sequences
+[M::worker_pipeline::823.642*4.06] mapped 16724 sequences
+[M::worker_pipeline::872.853*4.06] mapped 16722 sequences
+[M::worker_pipeline::924.368*4.06] mapped 16723 sequences
+[M::worker_pipeline::974.850*4.06] mapped 16724 sequences
+[M::worker_pipeline::1022.891*4.06] mapped 16728 sequences
+[M::worker_pipeline::1070.948*4.06] mapped 16731 sequences
+[M::worker_pipeline::1128.980*4.06] mapped 16732 sequences
+[M::worker_pipeline::1179.246*4.06] mapped 16733 sequences
+[M::worker_pipeline::1226.986*4.06] mapped 16753 sequences
+[M::worker_pipeline::1285.488*4.06] mapped 16790 sequences
+[M::worker_pipeline::1341.690*4.06] mapped 16778 sequences
+[M::worker_pipeline::1394.878*4.06] mapped 16775 sequences
+[M::worker_pipeline::1442.712*4.06] mapped 16775 sequences
+[M::worker_pipeline::1489.532*4.06] mapped 16783 sequences
+[M::worker_pipeline::1536.316*4.06] mapped 16775 sequences
+[M::worker_pipeline::1582.241*4.06] mapped 16778 sequences
+[M::worker_pipeline::1629.757*4.06] mapped 16762 sequences
+[M::worker_pipeline::1699.066*4.06] mapped 16730 sequences
+[M::worker_pipeline::1753.980*4.06] mapped 16728 sequences
+[M::worker_pipeline::1815.950*4.06] mapped 16730 sequences
+[M::worker_pipeline::1872.042*4.06] mapped 16729 sequences
+[M::worker_pipeline::1929.627*4.05] mapped 16481 sequences
+[M::main] Version: 2.24-r1122
+[M::main] CMD: minimap2 -t 4 -a --score-N=0 --secondary=no data/sars-cov-2/reference.fas data/sars-cov-2/sars-cov-2_ncbi-620k.fa.gz
+[M::main] Real time: 1929.628 sec; CPU: 7815.983 sec; Peak RSS: 1.364 GB
+	Command being timed: "bash -c minimap2 -t 4 -a --score-N=0 --secondary=no data/sars-cov-2/reference.fas data/sars-cov-2/sars-cov-2_ncbi-620k.fa.gz | samtools view -@ 4 -C -T data/sars-cov-2/reference.fas --output-fmt-option version=3.1 --output-fmt-option use_lzma=1 --output-fmt-option archive=1 --output-fmt-option level=9 > data/sars-cov-2/sars-cov-2_ncbi-620k.cram"
+	User time (seconds): 8429.36
+	System time (seconds): 127.03
+	Percent of CPU this job got: 443%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 32:10.76
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3328820
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7361822
+	Voluntary context switches: 816981
+	Involuntary context switches: 387610
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 51768
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
