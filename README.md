@@ -45,7 +45,7 @@ Note the following:
 * AGC compression used segment size 10,000
 
 | Compression/Tool |   Size (bytes) | Time (seconds) | Peak Memory (KB) |
-| :--------------- | ---=---------: | -------------: | ---------------: |
+| :--------------- | -------------: | -------------: | ---------------: |
 | Uncompressed     | 18,832,060,864 |            N/A |              N/A |
 | GZ               |            ??? |            ??? |              ??? |
 | XZ               |     56,312,672 |            ??? |              ??? |
