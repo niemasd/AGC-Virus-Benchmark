@@ -18,6 +18,6 @@ In the [supplement](https://oup.silverchair-cdn.com/oup/backfile/Content_public/
 I want to be able to benchmark against reference-compressed CRAM, so I want to be able to map against the reference genome using Minimap2, which I don't think(?) supports `xz` compression, so I wanted to `gzip`-compress instead:
 
 ```bash
-wget -qO- "https://zenodo.org/record/5826274/files/sars-cov-2_ncbi-620k.fa.xz?download=1" | xz --decompress | pigz -9 -p 6 > sars-cov-2_ncbi-620k.fa.gz
+wget -qO- "https://zenodo.org/record/5826274/files/sars-cov-2_ncbi-620k.fa.xz?download=1" | xz --decompress | pigz -9 -p 6 > data/sars-cov-2/sars-cov-2_ncbi-620k.fa.gz
 ```
 
