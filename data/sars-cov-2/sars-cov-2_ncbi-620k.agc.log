@@ -1,0 +1,24 @@
+Error: Pair sample_name:contig_name NC_045512.2 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome:NC_045512.2 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome is already in the archive!
+	Command being timed: "agc create -acb10000 -s3000 -t4 -o data/sars-cov-2/sars-cov-2_ncbi-620k.agc data/sars-cov-2/reference.fas /dev/fd/63"
+	User time (seconds): 284.60
+	System time (seconds): 13.89
+	Percent of CPU this job got: 318%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:33.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3400080
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 14521
+	Voluntary context switches: 2505575
+	Involuntary context switches: 533
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 44096
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
