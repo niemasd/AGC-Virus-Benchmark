@@ -40,7 +40,7 @@ Note the following:
 
 * Everything was run using 4 threads
 * GZ compression used `pigz` with `-9` compression level
-* Even though the original file was XZ-compressed, I recompressed with `-9` compression level to compare
+* I didn't rerun XZ compression: the listed size is of the original `sars-cov-2_ncbi-620k.fa.xz` file provided by the authors
 * CRAM runtime and peak memory include the Minimap2 step (see above)
 * CRAM compression used CRAM 3.1, LZMA, archive mode, and compression level 9 (see above)
 * AGC compression used segment size 10,000
