@@ -32,7 +32,7 @@ I then mapped the `gzip`-compressed SARS-CoV-2 multi-genome FASTA to the [NC_045
 I then used AGC to compress the same dataset, also using GNU `time` to measure runtime and peak memory usage.
 
 ```bash
-/usr/bin/time -v agc create -t 4 -s 10000 -o data/sars-cov-2/sars-cov-2_ncbi-620k.agc data/sars-cov-2/reference.fas data/sars-cov-2/sars-cov-2_ncbi-620k.fa.gz 2> data/sars-cov-2/sars-cov-2_ncbi-620k.agc.log
+/usr/bin/time -v agc create -acb10000 -s3000 -t4 -o data/sars-cov-2/sars-cov-2_ncbi-620k.agc data/sars-cov-2/reference.fas data/sars-cov-2/sars-cov-2_ncbi-620k.fa.gz 2> data/sars-cov-2/sars-cov-2_ncbi-620k.agc.log
 ```
 
 ## Results
