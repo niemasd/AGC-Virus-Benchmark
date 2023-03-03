@@ -43,7 +43,7 @@ Note the following:
 * I didn't rerun XZ compression: the listed size is of the original `sars-cov-2_ncbi-620k.fa.xz` file provided by the authors
 * CRAM runtime and peak memory include the Minimap2 step (see above)
 * CRAM compression used CRAM 3.1, LZMA, archive mode, and compression level 9 (see above)
-* AGC compression used segment size 10,000
+* AGC compression used segment size 10,000, but it blows up in memory and crashes on my laptop (8 GB)
 
 | Compression/Tool |   Size (bytes) | Time (seconds) | Peak Memory (KB) |
 | :--------------- | -------------: | -------------: | ---------------: |
